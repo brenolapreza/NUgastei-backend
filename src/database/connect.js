@@ -3,11 +3,11 @@ import knex from "knex";
 const database = knex({
   client: "mysql",
   connection: {
-    host: "127.0.0.1",
-    port: 3306,
-    user: "root",
-    password: "tucha",
-    database: "nugastei",
+    host: process.env.MYSQLHOST,
+    port: process.env.MYSQLPORT,
+    user: process.env.MYSQLUSER,
+    password: process.env.MYSQLPASSWORD,
+    database: process.env.MYSQLDATABASE,
   },
 });
 
