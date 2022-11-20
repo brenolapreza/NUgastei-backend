@@ -13,6 +13,10 @@ app.use(OperationRouter);
 
 const port = process.env.PORT || 3001;
 
+app.get("/", (req, res) => {
+  res.json({ msg: "Aplicação funcionando" });
+});
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });
