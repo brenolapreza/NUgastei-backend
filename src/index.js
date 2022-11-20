@@ -11,8 +11,8 @@ app.use(express.json());
 app.use(UserRouter);
 app.use(OperationRouter);
 
-const port = process.env.PORT || "3001";
+const port = process.env.PORT || 3001;
 
 app.listen(port, () => {
-  console.log("rodando " + port);
+  console.log(`Example app listening at http://localhost:${port}`);
 });
