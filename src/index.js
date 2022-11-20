@@ -2,8 +2,10 @@ import express from "express";
 import userController from "./controllers/UserController.js";
 import OperationRouter from "./routes/Operation.js";
 import UserRouter from "./routes/User.js";
+import dotenv from "dotenv";
 
 const app = express();
+dotenv.config();
 
 app.use(express.json());
 app.use(UserRouter);
